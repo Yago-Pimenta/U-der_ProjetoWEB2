@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Livvic&display=swap');
+
+html {
+    font-size: 100%;
+    font-family: 'Livvic', sans-serif;
+}
+
+main, header, nav, section, aside, footer {
+    margin: 0;
+    padding: 1.25em;
+    border: 1px solid #000000;
+    color: #ffffff;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    padding: 10px;
+    text-align: center;
+}
+
+main {
+    background: #000000;
+}
+
+header {
+    background: #03a9f4;
+}
+
+nav {
+    background: #d22b1f;
+}
+
+.content {
+    background: #129a22;
+}
+
+.sidebar {
+    border: 1px solid #000000;
+    background: #673ab7;
+}
+
+footer {
+    border: 1px solid #000000;
+    background: #616161;
+}
+
+.search-input {
+    width: 100%;
+    max-width: 30rem;
+    font-family: 'Livvic', sans-serif;
+}

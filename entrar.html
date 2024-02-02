@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uéder - Avisos sobre como o tempo está agora</title>
+  <link rel="stylesheet" href="style.css">
+</head> 
+<body>
+  <div class="navbar">
+    <div class="navbar-left">
+      <a id="UEDER" href="#">Uéder</a>
+    </div>
+    <div id="Titulo"></div>
+    <div class="navbar-right">
+      <a class="navbar-right-link" href="index.html">Home</a>
+      <a class="navbar-right-link" href="sobrenos.html">Sobre nós</a>
+      <a class="navbar-right-link" href="servicos.html">Serviços</a>
+      <a class="navbar-right-link" href="contato.html">Contato</a>
+      <a class="login_link" href="entrar.html">Entrar</a>
+      <a class="buttom" id="cadastro" href="registrar.html">Cadastrar-se</a>
+    </div>
+  </div>
+  <div id="navbar-hidden-menu" class="navbar-hidden">
+    <a class="navbar-hidden-link" href="index.html">Home</a><br>
+    <a class="navbar-hidden-link" href="sobrenos.html">Sobre nós</a><br>
+    <a class="navbar-hidden-link" href="servicos.html">Serviços</a><br>
+    <a class="navbar-hidden-link" href="contato.html">Contato</a>
+  </div>
+  <div class="login-container">
+    <form id="login-form" action="http://localhost:3000/login" method="POST">
+      <h2>Login</h2>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" required>
+      </div>
+  
+      <button type="button" onclick="submitForm()">Entrar</button>
+    </form>
+
+    <!-- Elemento para exibir mensagem de sucesso -->
+    <div id="mensagemSucesso" style="display: none; color: green; margin-top: 10px;">
+      Logado com sucesso!
+    </div>
+  </div>
+
+  <div id="mensagemSucesso" style="display: none; color: green; margin-top: 10px;">
+    Logado com sucesso!
+  </div>
+</div>
+
+<script>
+  document.getElementById('enviar').addEventListener('click', function () {
+    var form = document.getElementById('login-form');
+    var formData = new FormData(form);
+
+    fetch('http://localhost:3000/entrar.html', {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Erro na solicitação. Status: ' + response.status);
+      }
+      return response.json();
+    })
+    .then(data => {
+      console.log('Resposta do servidor:', data);
+      // Adicione aqui qualquer lógica adicional após o envio do formulário
+      window.location.href = '/'; // Redireciona para a página inicial
+    })
+    .catch(error => {
+      console.error('Erro durante a requisição:', error);
+      // Adicione aqui qualquer tratamento de erro adicional, se necessário
+    });
+  });
+</script>
+</body>
+</html>

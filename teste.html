@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Context Menu</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="teste_form_de_alerta.js"></script>
+    <style>
+      #menu-alerta {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        border: 1px solid #ccc;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+      }
+
+      #menu-alerta a {
+        display: block;
+        padding: 8px 12px;
+        text-decoration: none;
+        color: #333;
+      }
+    </style>
+  </head> 
+  <body>
+    <div id="menu-alerta">
+      <a class="menu-alerta-opcao" href="#" id="option-alert">Criar alerta</a>
+      <a class="menu-alerta-opcao" href="#">Opção 2</a>
+      <a class="menu-alerta-opcao" href="#">Opção 3</a>
+    </div>
+
+    <div id="alert-form-area">
+      <div id="alert-form-container" class="alert-container">
+        <form class="alert-form">
+          <h2 class="alert-form-title">Novo alerta</h2>
+          <!-- <button class="close-button" type="button" onclick="fecharFormulario()">x</button> -->
+          <img class="close-button" src="/img/icone_fechar_x.png" onclick="fecharFormulario()">
+          <div class="form-group">
+            <label for="alerta-tipo">Tipo de alerta:</label>
+            <select class="form-select" id="alerta-tipo" name="alerta-tipo">
+              <option value="chuva">Chuva</option>
+              <option value="vento-forte">Vento forte</option>
+              <option value="falta-de-luz">Falta de luz</option>
+            </select>
+          </div>
+      
+          <div class="form-group">
+            <label for="alerta-descricao">Descrição do alerta*</label>
+            <textarea class="form-textarea" name="alerta-descricao" rows="5" cols="50"></textarea>
+            <p class="form-observation">
+              *Opcional, uma breve descrição pode ajudar outros usuários com mais detalhes sobre o aviso em questão.
+            </p>
+          </div>
+  
+          <div class="form-group">
+            <input class="form-checkbox" type="checkbox" id="alerta-notificacao" name="alerta-notificacao" value="receber-notificacao">
+            <label class="form-checkbox-label" for="alerta-notificacao">Ativar notificações sobre este alerta</label>
+          </div>
+      
+          <button type="submit" onclick="fecharFormulario()">Criar</button>  
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

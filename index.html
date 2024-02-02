@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uéder - Avisos sobre como o tempo está agora</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="navbar.js"></script>
+</head>
+<body>
+    <!-- <a id="navbar-right-toggle-menu" class="navbar-right-icon" href="#">☰</a> -->
+    <div class="navbar">
+        <div class="navbar-left">
+            <a id= "UEDER" href="#">Uéder</a>
+        </div>
+        <!-- <div id="Titulo"></div> -->
+        <div class="navbar-right">
+            <a class="navbar-right-link" action="http://localhost:3000/">Home</a>
+            <a class="navbar-right-link" href="sobrenos.html">Sobre nós</a>
+            <a class="navbar-right-link" href="servicos.html">Serviços</a>
+            <a class="navbar-right-link" href="contato.html">Contato</a>
+            <a class="login_link" href="http://localhost:3000/entrar.html">Entrar</a>
+            <a class="buttom" id="cadastro" href="http://localhost:3000/registrar.html">Cadastrar-se</a>
+
+            <a id="navbar-right-toggle-menu" class="navbar-right-icon" href="#">☰</a>
+            <input type='checkbox' id='checkbox-dropdown-navbar-menu'/>
+        </div>
+    </div>    
+    <div id="background-container">
+        <div class="overlay-content">
+            <div class="content-box">
+                
+                <div class="main">
+                    <input type="text" placeholder="Pesquise sua localização" class="span-text">
+                    <a href="mapa.html">
+                        <span class="span-text1"> 
+                            <img src="pesquisa.png"></imag>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div> 
+        <!-- <div class="search-box">
+            <input type="text" class="search-text" placeholder="Pesquisar sua localização">
+            <a class="search-btn">
+                <img src="pesquisa.png" class="pesquisa">
+            </a>
+        </div> -->
+        <div id="navbar-hidden-menu" class="navbar-hidden">
+            <a class="navbar-hidden-link" href="/">Home</a><br>
+            <a class="navbar-hidden-link" href="sobrenos.html">Sobre nós</a><br>
+            <a class="navbar-hidden-link" href="servicos.html">Serviços</a><br>
+            <a class="navbar-hidden-link" href="contato.html">Contato</a>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="col-1">
+            <b>Conheça-nos</b><br>
+            <a href="#">Seja nosso parceiro</a><br>
+            <a href="#">Políticas de privacidade</a><br>
+            <a href="#">Termos de uso</a>
+        </div>
+        <!-- <div class="col-2">
+            <b>Informações de contato</b>
+            <p>email@exemplo.com</p>
+            <p>(00)98765-4321</p>
+        </div> -->
+    </div>
+</body>
+</html>
