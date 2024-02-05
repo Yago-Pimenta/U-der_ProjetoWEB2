@@ -46,7 +46,6 @@
             <div id="alert-form-container" class="alert-container">
                 <form class="alert-form">
                     <h2 class="alert-form-title">Novo alerta</h2>
-                    <!-- <button class="close-button" type="button" onclick="fecharFormulario()">x</button> -->
                     <img class="close-button" src="/img/icone_fechar_x.png" onclick="fecharFormulario()">
                     <div class="form-group">
                         <label for="alerta-tipo">Tipo de alerta:</label>
@@ -75,11 +74,9 @@
             </div>
         </div>
         <div id="content-map-area" class="content-map">
-            <div id="mapbox-area" class="mapbox">
-                <div class="floating-button" onclick="toggleSidebar()">+</div>
-                <!-- <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d29599.36508651376!2d-47.8806016!3d-21.97600885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1smapa%20google!5e0!3m2!1spt-BR!2sbr!4v1701366509646!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
-                <!-- <img src="/img/mapas-digitais-Sao-Carlos.jpg"> -->
-                <div id="mapa-sao-carlos"></div>
+            <div id="map" class="mapbox">
+                <!-- <div class="floating-button" onclick="toggleSidebar()">+</div>
+                <div id="mapa-sao-carlos"></div> -->
             </div>
             <button class="floating-button" onclick="openNav()">+</button>
             <div class="sidebar" id="mySidebar">
@@ -128,6 +125,10 @@
             var sidebar = document.getElementById("mySidebar");
             sidebar.style.width = sidebar.style.width === "0" ? "100%" : "0";
         }
+    </script>
+    <script src="mapa.js"></script>
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBm_lopD22takE-xRrs238dD1AJ-aOPxtk&loading=async&callback=initMap">
     </script>
 </body>
 </html>
